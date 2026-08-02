@@ -19,7 +19,7 @@ import com.EmployeeManagementSystem.springboot_backend.exception.ResourceNotFoun
 import com.EmployeeManagementSystem.springboot_backend.model.Employee;
 import com.EmployeeManagementSystem.springboot_backend.repository.EmployeeRepository;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://angular-frontend-tau.vercel.app")
 @RestController
 @RequestMapping("/api/v1/")
 public class EmployeeController {
