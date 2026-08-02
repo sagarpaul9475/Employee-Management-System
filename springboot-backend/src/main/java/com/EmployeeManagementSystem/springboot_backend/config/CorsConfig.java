@@ -13,32 +13,25 @@ public class CorsConfig {
 
     @Bean
     public CorsFilter corsFilter() {
-
         CorsConfiguration config = new CorsConfiguration();
 
+        // 1. Safe to use with setAllowedOriginPatterns
         config.setAllowCredentials(true);
 
-        config.setAllowedOrigins(
+        // 2. Changed from setAllowedOrigins to setAllowedOriginPatterns
+        config.setAllowedOriginPatterns(
                 List.of("https://angular-frontend-7farcmygc-sagarpaul9475s-projects.vercel.app")
         );
 
         config.setAllowedMethods(
-                List.of(
-                    "GET",
-                    "POST",
-                    "PUT",
-                    "DELETE",
-                    "OPTIONS"
-                )
+                List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")
         );
 
         config.setAllowedHeaders(
                 List.of("*")
         );
 
-        UrlBasedCorsConfigurationSource source =
-                new UrlBasedCorsConfigurationSource();
-
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
 
         return new CorsFilter(source);
