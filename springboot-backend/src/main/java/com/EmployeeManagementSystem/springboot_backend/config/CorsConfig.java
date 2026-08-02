@@ -19,7 +19,7 @@ public class CorsConfig {
         config.setAllowCredentials(true);
 
         config.setAllowedOrigins(
-                List.of("https://angular-frontend-tau.vercel.app")
+                List.of("https://angular-frontend-7farcmygc-sagarpaul9475s-projects.vercel.app")
         );
 
         config.setAllowedMethods(
