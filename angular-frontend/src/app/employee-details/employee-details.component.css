@@ -1,0 +1,32 @@
+h3 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+h3 + div {
+  max-width: 600px;
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+h3 + div > div {
+  display: flex;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+h3 + div > div:last-child {
+  border-bottom: none;
+}
+
+label {
+  width: 140px;
+  color: #374151;
+}
+
+b {
+  font-weight: 600;
+}
